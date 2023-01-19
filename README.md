@@ -43,7 +43,7 @@ SpheroScan consists of following two main modules:
 The Prediction Module uses previously trained Deep Learning models to analyze spheroid images and generate a CSV file with the area and intensity of each detected spheroid.  
 - Input <br><div style="text-align: right"> To use the prediction module, you must first upload a zipped folder containing your spheroid images. These images can be in .jpeg, .tif, or .jpg format from an Incucyte or microscope platform, but can also be from other platforms as long as there is only one spheroid per image and the background contrast is similar to Incucyte or microscope images.</div>
     
-- Parameters. 
+- Parameters 
   - **Platform Type:** Before running the module, user can choose the platform the images belong to (spheroid or Incucyte) using platform dropdown.
   - **Prediction Threshold:** User can also set a prediction threshold (values between 0 and 1) from prediction threshold menu. A higher threshold results in better quality predictions but may not detect all spheroids.
       

@@ -34,7 +34,13 @@
     python main.py                                   #It will open a web window and launch SpheroScan
     ```
 
-
+# Example Input Data 
+  - Prediction Module 
+    - Microscope images - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/microscope_images.zip
+    - Incucyte Images - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/incucyte_images.zip
+  - Visualization Module 
+    - Area file - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/area_file.csv
+    - Metadata file - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/meta_file.csv
       
 # Tutorial
 

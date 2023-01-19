@@ -11,7 +11,7 @@
 # Installation
   - #### Download sourcecode and model weights. 
     1. Download the SpheroScan GitHub repository from https://github.com/FunctionalUrology/SpheroScan.
-    2. Download the model weights from the provided link ------ . Unzip and copy the model weights to the previously downloaded SpheroScan directory.
+    2. Download the model weights (weights.zip) from https://zenodo.org/record/7552508#.Y8mkq-zMKsA . Unzip weights.zip file and copy the model weight files() to the previously downloaded SpheroScan directory (SpheroScan).
     
 - #### Install dependencies  
     1. Open your terminal and change the directory to the SpheroScan directory (e.g. ```cd path/to/SpheroScan/dir```). 

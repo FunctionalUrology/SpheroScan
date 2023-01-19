@@ -1,15 +1,15 @@
-# SpheroScan
+# <img src="./assets/logo-color.svg" width="100" height="100"> SpheroScan
 
-## Prerequisite. 
+## Prerequisite 
   - To install SpheroScan, you will need to have a compatible operating system (Mac, Linux, or Windows).  
-  - Conda installed. You can follow the official Conda documentation (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html) to install Conda. Once installed, run the command ```conda list``` in your terminal to test your installation. You could follow this tutorial to learn more about conda.
+  - Conda installed. You can follow the official Conda documentation (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html) to install Conda. Once installed, run the command ```conda list``` in your terminal to test your installation. You could follow [this tutorial](https://pythonsimplified.com/managing-python-virtual-environments-with-conda/) to learn more about conda. 
 
-## Installation. 
+## Installation
   - #### Download sourcecode and model weights. 
     1. Download the SpheroScan GitHub repository from https://github.com/FunctionalUrology/SpheroScan.
     2. Download the model weights from the provided link ------ . Unzip and copy the model weights to the previously downloaded SpheroScan directory.
     
-- #### Install dependencies.  
+- #### Install dependencies  
     1. Open your terminal and change the directory to the SpheroScan directory (e.g. ```cd path/to/SpheroScan/dir```). 
     2. Run following commands one by one:    
   
@@ -31,7 +31,7 @@
     ```
 
 
-## Errors you may encountered. 
+## Errors you may encounter 
 - ``` ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts. detectron2 0.6 requires black==21.4b2, which is not installed.```.  
   - Possible solution: You can simply ignore this error.
   

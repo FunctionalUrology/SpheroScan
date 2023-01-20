@@ -33,7 +33,14 @@
     conda activate my_env                            #activate previously created Conda environment
     python main.py                                   #It will open a web window and launch SpheroScan
     ```
-
+- #### Errors you may encounter
+  - ``` ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts. detectron2 0.6 requires black==21.4b2, which is not installed.```.  
+    - Possible solution: You can simply ignore this error.
+  
+  - ``` Address already in use. Port 4549 is in use by another program. Either identify and stop that program, or start the server with a different port.```.  
+    - Possible solution: Before relaunching, please verify if you have a server already running for SpheroScan by checking your terminal and browser windows. If a server is already running, kindly close it.
+  
+  
 # Example Input Data 
   - Prediction Module 
     - Microscope images - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/microscope_images.zip
@@ -89,9 +96,4 @@ The Visualization Module enables the user to interpret the output of the Predict
 
 ***
 
-# Errors you may encounter 
-- ``` ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts. detectron2 0.6 requires black==21.4b2, which is not installed.```.  
-  - Possible solution: You can simply ignore this error.
-  
-- ``` Address already in use. Port 4549 is in use by another program. Either identify and stop that program, or start the server with a different port.```.  
-  - Possible solution: Before relaunching, please verify if you have a server already running for SpheroScan by checking your terminal and browser windows. If a server is already running, kindly close it.
+

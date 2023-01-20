@@ -12,7 +12,23 @@ from dash.dependencies import Input, Output
 import dash_bootstrap_components as dbc
 
 from UI_com import visualization,pred
+from pathlib import Path
+from zipfile import ZipFile
 
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+#unzip weights
+
+try:
+   if Path("model_final_Incu.pth").is_file() and Path("model_final.pth").is_file():
+       pass
+   elif Path("weights.zip").is_file():
+       with ZipFile("weights.zip", 'r') as zip:
+           zip.extractall()
+   else:
+        print('Unable to locate the "weights.zip" file. Ensure that the "weights.zip" file has been moved within the SpheroScan-main directory.')
+       
+except Exception as e:
+  print("Following exception occured while unzipping weight files: ",e)
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
 navigation_bar = dbc.Navbar(

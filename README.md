@@ -16,7 +16,7 @@
 - #### Install dependencies  
     1. Open your terminal and change your current working directory to SpheroScan-main (e.g. ```cd path/to/SpheroScan-main/```). 
     2. Run following commands:  
-       - Create a new Conda environment called for e.g my_env and then activate it.
+       - Create a new Conda environment called "my_env" and activate it.
        ```
        conda create -n my_env                          
        conda activate my_env                           
@@ -36,8 +36,8 @@
        ```
        pip install -r requirements.txt                     
        ``` 
-       
-       - Launch SpheroScan. It will be launched in a new web window, the time it takes to open may vary depending on computational resources
+ 
+       - Launch SpheroScan. It will be launched in a new web window, the time it takes to open may vary depending on computational resources.
        ```
        python main.py             
        ``` 
@@ -51,8 +51,7 @@
     python main.py                                  #SpheroScan will be launched in a new web window, the time it takes 
                                                     #to open may vary depending on computational resources
 
- 
- 
+
 - #### Re-run SpheroScan
     1. Open your terminal and change the directory to the SpheroScan directory (e.g. ```cd path/to/SpheroScan/dir```). 
     2. Run following commands one by one:  

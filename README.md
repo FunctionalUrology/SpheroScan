@@ -114,4 +114,17 @@ The Visualization Module enables the user to interpret the output of the Predict
 
 ***
 
+- SpheroScan Plot Gallery <br> SpheroScan offers following type of plots and example plots are availaible [here](https://github.com/FunctionalUrology/SpheroScan/tree/main/plot-gallery).  
+  - **Bar Plot with significance level**: A bar plot with significance level is a visual representation of data where the level of significance is indicated by stars. Three stars (***) indicate a p-value of less than 0.001, while "ns" represents a p-value of 0.05 or greater. The less stars, the lower the significance level. <br>
+  
+  - **Bubble Plot**: A bubble plot is a type of scatter plot where the size of the bubbles represents the mean spheroid area for a certain group. The Y-axis displays the relative area or contraction of the spheroid, calculated with respect to a baseline group. <br>
+  
+  - **Treemap** <br> 
+  
+  - **Line Plot** <br>
+  - **Bar Plot** <br>
+  - **Scatter Plot** <br>
+
+
+
 

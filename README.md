@@ -6,7 +6,7 @@
 
 # Prerequisite 
   - To install SpheroScan, you will need to have a compatible operating system (Mac, Linux, or Windows).  
-  - Conda installed. You can follow the official Conda documentation (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html) to install Conda. Once installed, run the command ```conda list``` in your terminal to test your installation. You could follow [this tutorial](https://pythonsimplified.com/managing-python-virtual-environments-with-conda/) to learn more about conda. 
+  - Anaconda installed. You can follow the official Conda documentation (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html) to install Conda. Once installed, run the command ```conda list``` in your terminal to test your installation. You could follow [this tutorial](https://pythonsimplified.com/managing-python-virtual-environments-with-conda/) to learn more about conda. 
 
 # Installation
   - #### Download sourcecode and model weights. 

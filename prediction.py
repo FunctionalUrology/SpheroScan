@@ -74,11 +74,11 @@ def getArea(outputs,d,df):
 
 
 def predict(imagesPath,thr,imageType): 
-
+ 
     if imageType=="incucyte":
-        weight="model_final_Incu.pth"
+        weight=os.path.join(os.getcwd(),"weights","model_final_Incu.pth")
     else:
-        weight="model_final.pth"
+        weight=os.path.join(os.getcwd(),"weights","model_final.pth")
     
     
     cfg = get_cfg()

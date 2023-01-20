@@ -1,6 +1,7 @@
 # <img src="./assets/logo-color.svg" width="100" height="100"> SpheroScan
 
-# Table of contents
+
+#### Table of contents
 
 - [Summary](#summary)
 - [Demo Server](#demo-server)

@@ -23,7 +23,8 @@
     conda install python=3.10.6                     #Install Python
     conda install -c conda-forge detectron2         #Install detectron2
     pip install -r requirements.txt                 #Install other dependencies for SpheroScan
-    python main.py                                  #It will open a web window and launch SpheroScan
+    python main.py                                  #SpheroScan will be launched in a new web window, the time it takes 
+                                                    #to open may vary depending on computational resources
  
 - #### Re-run SpheroScan
     1. Open your terminal and change the directory to the SpheroScan directory (e.g. ```cd path/to/SpheroScan/dir```). 

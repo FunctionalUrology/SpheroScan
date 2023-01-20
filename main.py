@@ -15,7 +15,7 @@ from UI_com import visualization,pred
 from pathlib import Path
 from zipfile import ZipFile
 
-#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!  
+#!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #unzip weights
 
 try:
@@ -25,8 +25,12 @@ try:
        with ZipFile("weights.zip", 'r') as zip:
            zip.extractall()
    else:
-        print('Unable to locate the "weights.zip" file. Ensure that the "weights.zip" file has been moved within the SpheroScan-main directory.')
-       
+        raise Exception('Unable to locate the "weights.zip" file. Ensure that the "weights.zip" file has been moved within the$
+
+except Exception as e:
+  print("Following exception occured while unzipping weight files: ",e)
+  exit()
+                        
 except Exception as e:
   print("Following exception occured while unzipping weight files: ",e)
 

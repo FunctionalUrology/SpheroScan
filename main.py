@@ -17,9 +17,8 @@ from zipfile import ZipFile
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 #unzip weights
-
 try:
-   if Path("model_final_Incu.pth").is_file() and Path("model_final.pth").is_file():
+   if Path("weights").is_dir():
        pass
    elif Path("weights.zip").is_file():
        with ZipFile("weights.zip", 'r') as zip:
@@ -30,9 +29,6 @@ try:
 except Exception as e:
   print("Following exception occured while unzipping weight files: ",e)
   exit()
-                        
-except Exception as e:
-  print("Following exception occured while unzipping weight files: ",e)
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!    
 navigation_bar = dbc.Navbar(

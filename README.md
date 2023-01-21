@@ -85,6 +85,7 @@ We have set up a demo server for SpheroScan for demonstration purposes. Please  
   - Visualization Module 
     - Area file - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/area_file.csv
     - Metadata file - https://github.com/FunctionalUrology/SpheroScan/blob/main/example-Input-data/meta_file.csv
+  - **Note:** If you are interested in using the SpheroScan for spheroid images from platforms other than incucyte/microscope and are willing to share images from your dataset, please contact the development team for further information.
       
 # Tutorial
 

@@ -115,13 +115,17 @@ def predict(imagesPath,thr,imageType):
         
     areaData.sort_values(by=["filename"],inplace=True)
     areaData.to_csv('spheroidArea.csv')  
-
+    
+    areaData.drop(areaData.columns[[1, 2, 3]], axis=1, inplace=True)
+    areaData.to_csv('spheroidMeta.csv',index=False) 
+    
     with ZipFile("results.zip", 'w') as zipObj2:
         for d in filenames: 
             if not any(d.endswith(s) for s in [".jpeg",".tif",".jpg"]):
                 continue
             zipObj2.write(d) 
         zipObj2.write("spheroidArea.csv")
+        zipObj2.write("spheroidMeta.csv")
         
 
     

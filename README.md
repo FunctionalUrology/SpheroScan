@@ -76,6 +76,9 @@ We have set up a demo server for SpheroScan for demonstration purposes. Please  
   
   - ``` Address already in use. Port 4549 is in use by another program. Either identify and stop that program, or start the server with a different port.```.  
     - Possible solution: Before relaunching, please verify if you have a server already running for SpheroScan by checking your terminal and browser windows. If a server is already running, kindly close it.
+
+  - ``` AttributeError: module 'packaging.version' has no attribute 'LegacyVersion'```.  
+    - Possible solution: To fix this error, you can install an older version of the 'packaging' package using ```pip install packaging==21.3```
   
   
 # Example Input Data

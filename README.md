@@ -26,6 +26,7 @@ We have set up a demo server for SpheroScan for demonstration purposes. Please  
 # Prerequisite 
   - To install SpheroScan, you will need to have a compatible operating system (Mac or Linux).  
   - Anaconda installed. You can follow the official Conda documentation (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html) to install Conda. Once installed, run the command ```conda list``` in your terminal to test your installation. You could follow [this tutorial](https://pythonsimplified.com/managing-python-virtual-environments-with-conda/) to learn more about conda. 
+  - Git installed. Git is included as a default on many Mac and Linux systems. To confirm if it's installed on your machine, open the terminal and type ```git version```. If Git is not present, you can follow the official [Git guide](https://github.com/git-guides/install-git) to install the latest version.
 
 # Installation
   - #### Download sourcecode and model weights. 
@@ -45,16 +46,17 @@ We have set up a demo server for SpheroScan for demonstration purposes. Please  
        ```
        conda install python=3.10.6                        
        ```
-           
-       - Install detectron2  
-       ```
-       conda install -c conda-forge detectron2                      
-       ```
        
-        - Install other dependencies for SpheroScan
+       - Install dependencies for SpheroScan
        ```
        pip install -r requirements.txt                     
        ``` 
+       
+       - Install detectron2  
+       ```
+       pip install 'git+https://github.com/facebookresearch/detectron2.git' 
+       pip install packaging==21.3
+       ```
  
        - Launch SpheroScan. It will be launched in a new web window, the time it takes to open may vary depending on computational resources.
        ```

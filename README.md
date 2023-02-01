@@ -36,7 +36,7 @@ We have set up a demo server for SpheroScan for demonstration purposes. Please  
 - #### Install dependencies  
     1. Open your terminal and change your current working directory to SpheroScan-main (e.g. ```cd path/to/SpheroScan-main/```). 
     2. Run following commands:  
-       - Create a new Conda environment called "my_env" and activate it.
+       - Create a new Conda environment called ```my_env``` and activate it.
        ```
        conda create -n my_env                          
        conda activate my_env                           

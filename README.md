@@ -5,8 +5,8 @@
 
 - [Summary](#summary)
 - [Demo Server](#demo-server)
-- [Prerequisite](#prerequisite)
 - [Graphical Abstract](#graphical-abstract)
+- [Prerequisite](#prerequisite)
 - [Installation](#installation)
     + [Download sourcecode and model weights.](#download-sourcecode-and-model-weights)
     + [Install dependencies](#install-dependencies)

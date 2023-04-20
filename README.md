@@ -6,6 +6,7 @@
 - [Summary](#summary)
 - [Demo Server](#demo-server)
 - [Prerequisite](#prerequisite)
+- [Graphical Abstract](#graphical-abstract)
 - [Installation](#installation)
     + [Download sourcecode and model weights.](#download-sourcecode-and-model-weights)
     + [Install dependencies](#install-dependencies)
@@ -22,6 +23,8 @@
 # Demo Server
 We have set up a demo server for SpheroScan for demonstration purposes. Please  [click here](https://spheroscan.onrender.com/) to launch it. Please note that it may take a moment to load. <br><br> User can use the [example input data](#example-input-data) to test the visualization module. However, please note that the prediction module will not be available due to limitations on computational resources on the demo server.  
 
+# Graphical Abstract
+<p align="center"><img src="./assets/figGallery.png" width="80%" align="middle"> </p> 
 
 # Prerequisite 
   - To install SpheroScan, you will need to have a compatible operating system (Mac or Linux).  

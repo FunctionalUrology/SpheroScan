@@ -7,7 +7,8 @@
 - [Demo Server](#demo-server)
 - [Graphical Abstract](#graphical-abstract)
 - [Prerequisite](#prerequisite)
-- [Installation](#installation)
+- [Installation (via Docker)](#installation-via-docker)
+- [Installation (from source code)](#installation-from-source-code)
     + [Download sourcecode and model weights.](#download-sourcecode-and-model-weights)
     + [Install dependencies](#install-dependencies)
     + [Re-run SpheroScan](#re-run-spheroscan)
@@ -31,7 +32,24 @@ We have set up a demo server for SpheroScan for demonstration purposes. Please  
   - Anaconda installed. You can follow the official Conda documentation (https://docs.conda.io/projects/continuumio-conda/en/latest/user-guide/install/index.html) to install Conda. Once installed, run the command ```conda list``` in your terminal to test your installation. You could follow [this tutorial](https://pythonsimplified.com/managing-python-virtual-environments-with-conda/) to learn more about conda. 
   - Git installed. Git is included as a default on many Mac and Linux systems. To confirm if it's installed on your machine, open the terminal and type ```git version```. If Git is not present, you can follow the official [Git guide](https://github.com/git-guides/install-git) to install the latest version.
 
-# Installation
+# Installation (via Docker)
+  1. **Prerequisite:** Before proceeding with the installation, ensure that Docker is installed and running. If you haven't installed Docker yet, you can follow the [official Docker tutorial](https://docs.docker.com/get-docker/) for installation instructions.
+  2. To obtain the SpheroScan docker image, you may open your terminal and run the provided command.
+       
+       ```
+       docker pull 45474547/spheroscan:latest                     
+       ```
+       
+  3. To launch SpheroScan, please run the given command in your terminal after performing the previous steps.
+       
+       ```
+       docker run -p 8080:80 45474547/spheroscan                     
+       ```
+       
+  4. Paste http://localhost:8080/ in your browser to access SpheroScan.
+       
+       
+# Installation (from source code)
   - #### Download sourcecode and model weights. 
     1. Download the SpheroScan GitHub repository from https://github.com/FunctionalUrology/SpheroScan and unzip it.
     2. Download the model weights ("weights.zip") from [here](https://zenodo.org/record/7552508#.Y8mkq-zMKsA). Move weights.zip file in the "SpheroScan-main" directory.

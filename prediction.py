@@ -27,6 +27,7 @@ from detectron2.engine import DefaultTrainer
 import pandas as pd
 from detectron2.utils.visualizer import ColorMode
 
+import diplib as dip
 
 def getArea(outputs,d,df):
     
@@ -60,13 +61,23 @@ def getArea(outputs,d,df):
         #area
         ###########
 
-        cv2.polylines(img, [item], True,color , 3)
+        cv2.polylines(img, [item], True,color , 2)
         area_cm=cv2.contourArea(item)
         
-        #update dataframe
-        df.loc[len(df)] = [d.split("/")[-1], i,area_cm,inten] 
         
-        cv2.putText(img, "SN:{}->{}".format(i,area_cm), (int(item[0][0][0]), int(item[0][0][1])), cv2.FONT_HERSHEY_SIMPLEX, 2, (192, 245, 162) , 5)
+        ###########
+        #roundness
+        ###########
+
+        labels = dip.Label(cimg[:, :, 0] > 0)
+        msr = dip.MeasurementTool.Measure(labels, features=["Roundness"])
+        Circularity = msr[1]["Roundness"][0]
+        
+        
+        #update dataframe
+        df.loc[len(df)] = [d.split("/")[-1], i,area_cm,inten,Circularity] 
+        
+        cv2.putText(img, "SN:{}->{}".format(i,area_cm), (int(item[0][0][0]), int(item[0][0][1])), cv2.FONT_HERSHEY_SIMPLEX, 2.5, (192, 245, 162) , 2)
     return img
 
 
@@ -99,10 +110,10 @@ def predict(imagesPath,thr,imageType):
     filenames=os.listdir(imagesPath)
     os.chdir(imagesPath)
     
-    areaData = pd.DataFrame(columns=['filename',"spheroid No" ,'area (in pixels)', 'intensity'])
+    areaData = pd.DataFrame(columns=['filename',"spheroid No" ,'area (in pixels)', 'intensity','circularity'])
     
     for d in filenames: 
-        if not any(d.endswith(s) for s in [".jpeg",".tif",".jpg"]):
+        if not any(d.endswith(s) for s in [".jpeg",".tif",".jpg",".png"]):
             continue
         im = cv2.imread(d)
         outputs = predictor(im)  
@@ -116,17 +127,17 @@ def predict(imagesPath,thr,imageType):
     areaData.sort_values(by=["filename"],inplace=True)
     areaData.to_csv('spheroidArea.csv')  
     
-    areaData.drop(areaData.columns[[1, 2, 3]], axis=1, inplace=True)
-    areaData.to_csv('spheroidMeta.csv',index=False) 
-    
+    areaData.drop(areaData.columns[[1, 2, 3,4]], axis=1, inplace=True)
+    areaData.to_csv('spheroidMeta.csv',index=False)  
+
     with ZipFile("results.zip", 'w') as zipObj2:
         for d in filenames: 
-            if not any(d.endswith(s) for s in [".jpeg",".tif",".jpg"]):
+            if not any(d.endswith(s) for s in [".jpeg",".tif",".jpg",".png"]):
                 continue
             zipObj2.write(d) 
         zipObj2.write("spheroidArea.csv")
         zipObj2.write("spheroidMeta.csv")
-        
+
 
     
     shutil.copyfile("results.zip", "/".join(os.getcwd().split("/")[:-1])+"/results.zip")

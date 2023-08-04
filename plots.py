@@ -149,7 +149,7 @@ config={'displaylogo': False,
 def getBarPlot(area,xAxis,yAxis,pal,color,xAxisOrder):
 
       
-    grouptypes=list(area.columns)[5:]
+    grouptypes=list(area.columns)[6:] #change
     
     area_melt=pd.melt(area, id_vars=grouptypes, value_vars=[yAxis],var_name='filename', value_name=yAxis)
 
@@ -188,7 +188,7 @@ def getBarPlot(area,xAxis,yAxis,pal,color,xAxisOrder):
 
  #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!   
 def getBarPlotStat(area,xAxis,yAxis,group,pal,color,xAxisOrder):
-    grouptypes=list(area.columns)[5:]
+    grouptypes=list(area.columns)[6:] #change
     
     area_melt=pd.melt(area, id_vars=grouptypes, value_vars=[yAxis],var_name='filename', value_name=yAxis)
     area_melt_sub=area_melt.loc[area_melt[xAxis].apply(str)==group]
@@ -233,7 +233,7 @@ def getBarPlotStat(area,xAxis,yAxis,group,pal,color,xAxisOrder):
 
 #!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
 def getLinePlot(area_up,xAxis,yAxis,barPlotColor,xAxisOrder):
-    groups=list(area_up.columns)[5:]
+    groups=list(area_up.columns)[6:] #change
     groups.remove(xAxis)
     
     #xLabel=list(set(area_up[xAxis].tolist()))
@@ -389,7 +389,7 @@ def getRelScatterPlot(area_up,xAxis,yAxisType,baseline_temp,colorSP,colfacetSP,c
     print(baseline)  
         
     #facet
-    groups=list(area_up.columns)[5:]
+    groups=list(area_up.columns)[6:] #change
     yAxis='area (in pixels)'
     if colRowSP=="None":
         colRowSP=None
@@ -502,7 +502,7 @@ def getPlots(plotType,area_up,xAxis,yAxis,barPlotColor,updateOrder,xAxisOrder,co
         xAxisOrder=list(set(area_up[xAxis].tolist()))
 
            
-    groups=list(area_up.columns)[5:] 
+    groups=list(area_up.columns)[6:]  #change
     groups.remove(xAxis)
     
 
@@ -533,7 +533,7 @@ def getPlots(plotType,area_up,xAxis,yAxis,barPlotColor,updateOrder,xAxisOrder,co
         return html.Div(div_row)
     
     elif plotType=="treemap":
-        grouptypes=list(area_up.columns)[5:]
+        grouptypes=list(area_up.columns)[6:] #change
         area_melt=pd.melt(area_up, id_vars=grouptypes, value_vars=[yAxis],var_name='filename', value_name=yAxis)
         fig = px.treemap(area_melt, path=[px.Constant("All Groups")]+grouptypes, values=yAxis,
                           color=yAxis,

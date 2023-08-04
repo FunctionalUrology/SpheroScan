@@ -70,6 +70,7 @@ sideOptions=dbc.Card([dbc.CardBody([
                             dcc.Dropdown(options=[
                                 {"label": "Area", "value": "area (in pixels)"},
                                 {"label": "Intensity", "value": "intensity"},
+                                {"label": "Circularity", "value": "circularity"},
                                 {"label": "Realtive Area", "value": "relArea"},
                                 {"label": "Contraction", "value": "contraction"}],value="area (in pixels)",clearable=False,style={"font-size": "12px","color":"black"},
                             id="yAxis",persistence=True,persistence_type="memory")]),
@@ -324,7 +325,8 @@ from zipfile import ZipFile
     
 )
 def predictMask(Thre,n_clicks,imageType,filePath):
-  
+   
+    #return html.Label([html.Strong("This is a demonstration server and the prediction module is not available for use. To utilize the prediction functionality, please run SpheroScan on your local machine.")],style={"text-align": "Justify"}),None
     if filePath!={} and n_clicks:   
         try: 
             zippedFolder = [ f for f in os.listdir(filePath) if f.endswith('.zip')][0] 
@@ -458,7 +460,7 @@ def changeAxisOrder(plotType,xAxisOrder,xAxis):
 def spOptions(plotType,colorSP,colfacetSP,colRowSP):
     if plotType=="scatter" and isinstance(area_up, pd.DataFrame)==True:
         
-        groups=list(area_up.columns)[5:]
+        groups=list(area_up.columns)[6:] #change
         options= [{'label': i, 'value': i} for i in groups]+[{'label': "None", 'value': "None"}]
         if colorSP==[]:
             colorSP=groups[0]
@@ -497,7 +499,7 @@ def spOptions(plotType,colorSP,colfacetSP,colRowSP):
 def spOptions_relArea(yAxis,colorSP,colfacetSP,colRowSP,baseline,baseline_value):
     if (yAxis=="relArea" or yAxis=="contraction")  and isinstance(area_up, pd.DataFrame)==True:
         
-        groups=list(area_up.columns)[5:]
+        groups=list(area_up.columns)[6:] #change
         options= [{'label': i, 'value': i} for i in groups]+[{'label': "None", 'value': "None"}]       
 
         #baseline options
@@ -613,11 +615,11 @@ def readData(n_clicks,plotType,yAxis,xAxis,barPlotColor,updateOrder,xAxisOrder,c
                     
                     #handle first enrty of scatter plot relative
                     if colorSP_rel==None or colorSP_rel==[]:
-                        colorSP_rel=list(area_up.columns)[5]
+                        colorSP_rel=list(area_up.columns)[6]
                     
                     #handle first enrty of sp
                     if colorSP==None or colorSP==[]:
-                        colorSP=list(area_up.columns)[5]
+                        colorSP=list(area_up.columns)[6]
                                             
                     return getPlots(plotType,area_up,xAxis,yAxis,barPlotColor,updateOrder,
                                     xAxisOrder,colorSP,colfacetSP,colRowSP,

@@ -176,7 +176,9 @@ The Visualization Module enables the user to interpret the output of the Predict
   - **Scatter Plot** <br>
 
 ## Citations information
-Please cite **SpheroScan** article preprinted in [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.06.28.533479v1).
+Please cite **SpheroScan** article published in [GigaScience](https://academic.oup.com/gigascience/article/doi/10.1093/gigascience/giad082/7330890#422825836) and [bioRxiv](https://www.biorxiv.org/content/10.1101/2023.06.28.533479v1).
+
+Akshay Akshay, Mitali Katoch, Masoud Abedi, Navid Shekarchizadeh, Mustafa Besic, Fiona C Burkhard, Alex Bigger-Allen, Rosalyn M Adam, Katia Monastyrskaya, Ali Hashemi Gheinani, SpheroScan: a user-friendly deep learning tool for spheroid image analysis, GigaScience, Volume 12, 2023, giad082, https://doi.org/10.1093/gigascience/giad082
 
 SpheroScan: A User-Friendly Deep Learning Tool for Spheroid Image Analysis. <i>Akshay Akshay, Mitali Katoch, Masoud Abedi, Mustafa Besic, Navid Shekarchizadeh, Fiona Burkhard, Alex Bigger-Allen, Rosalyn Adam, Katia Monastyrskaya, Ali Hashemi Gheinani</i>. bioRxiv 2023.06.28.533479; doi: https://doi.org/10.1101/2023.06.28.533479
 
